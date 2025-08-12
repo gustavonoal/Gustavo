@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | [Seu Nome]</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="theme-toggle-btn" class="theme-toggle-btn">
+            <span class="material-icons light-icon">light_mode</span>
+            <span class="material-icons dark-icon hidden">dark_mode</span>
+        </button>
+    </div>
+    <div class="container">
+        <h1>[Seu Nome], Designer Gráfico</h1>
+        <p class="subtitle">Bem-vindo ao meu portfólio. Aqui, a criatividade ganha vida.
+            Acesse o **Creative Hub** para visualizar projetos exclusivos!</p>
+        <div class="auth-forms">
+            <div class="form-toggle">
+                <button id="show-login-btn" class="active">
+                    <span class="material-icons">login</span>
+                    Acesso Colaborador
+                </button>
+                <button id="show-register-btn">
+                    <span class="material-icons">person_add</span>
+                    Primeiro Acesso
+                </button>
+            </div>
+            <form id="login-form" class="auth-form active">
+                <h2>Entrar no Hub</h2>
+                <div class="form-group">
+                    <label for="login-username">Nome de Usuário:</label>
+                    <input type="text" id="login-username" required placeholder="Seu nome de usuário">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha:</label>
+                    <input type="password" id="login-password" required placeholder="Sua senha secreta">
+                </div>
+                <button type="submit">Acessar Projetos</button>
+                <p id="login-message" class="message error"></p>
+            </form>
+            <form id="register-form" class="auth-form hidden">
+                <h2>Solicitar Acesso</h2>
+                <div class="form-group">
+                    <label for="register-username">Nome Completo:</label>
+                    <input type="text" id="register-username" required placeholder="Nome do seu contato">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha:</label>
+                    <input type="password" id="register-password" required placeholder="Crie uma senha temporária">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" required placeholder="seuemail@cliente.com">
+                </div>
+                <button type="submit">Enviar Solicitação</button>
+                <p id="register-message" class="message error"></p>
+            </form>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

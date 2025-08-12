@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Hub | Painel de Projetos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="theme-toggle-btn" class="theme-toggle-btn">
+            <span class="material-icons light-icon">light_mode</span>
+            <span class="material-icons dark-icon hidden">dark_mode</span>
+        </button>
+    </div>
+    <div class="container dashboard-container">
+        <h1><span class="material-icons">folder_shared</span> Olá, <span id="dashboard-username"></span>!</h1>
+        <p class="subtitle">Bem-vindo ao seu painel de projetos. Aqui você pode acompanhar o andamento dos trabalhos.</p>
+        <div class="user-info">
+            <p>Seu contato: <strong><span id="dashboard-email"></span></strong></p>
+        </div>
+        <div class="dashboard-options">
+            <h2>Projetos em Andamento</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">design_services</span>
+                        Ver Projeto: Logotipo "StartupX"
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">palette</span>
+                        Projeto: Identidade Visual "Cafeteria Aurora"
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">photo_library</span>
+                        Projeto: Design para Mídias Sociais
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">chat</span>
+                        Central de Comunicação
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button id="logout-btn" class="logout-button">
+            <span class="material-icons">logout</span>
+            Sair do Hub
+        </button>
+    </div>
+
+    <div id="project-modal" class="project-modal hidden">
+        <div class="project-modal-content">
+            <span class="close-btn material-icons">close</span>
+            <img id="project-image" src="" alt="Imagem do Projeto">
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
