@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Aleatório</h1>
+        <button id="toggleTheme">🌙</button>
+
+        <div id="difficulty-selection" class="difficulty-selection">
+            <img id="difficulty-image" src="img/pega pai.jpg" alt="Escolha a Dificuldade"> 
+            <h2>Escolha a Dificuldade</h2>
+            <button class="difficulty-button" data-difficulty="easy">Fácil</button>
+            <button class="difficulty-button" data-difficulty="medium">Médio</button>
+            <button class="difficulty-button" data-difficulty="hard">Difícil</button>
+        </div>
+
+        <div id="question-container" class="question-container">
+            <img id="question-image" src="" alt="Imagem da Pergunta">
+            <p id="question-number"></p> <p id="question-text"></p>
+            <div id="answer-buttons" class="answer-buttons">
+            </div>
+        </div>
+        <div id="result-container" class="result-container">
+            <h2>Você terminou!!</h2>
+            <p>Você acertou <span id="score">0</span> de <span id="total-questions">0</span> perguntas.</p>
+            <h2>Tente outra Vez</h2>
+            <button id="restart-button" class="restart-button">Recomeçar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
