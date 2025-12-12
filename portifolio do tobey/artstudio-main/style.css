@@ -1,0 +1,453 @@
+/* Tema Tobey Maguire - Elegante e Cinematográfico */
+:root {
+	--primary-color: #232946; /* Azul escuro elegante */
+	--secondary-color: #eebbc3; /* Rosa claro, remete à elegância dos filmes clássicos */
+	--accent-color: #f7f7f7; /* Branco suave */
+	--light-color: #f7f7f7;
+	--dark-color: #121629;
+	--transition: all 0.3s ease;
+	--gold: #ffd700;
+	--shadow: 0 8px 32px rgba(35,41,70,0.15);
+	--cinema-red: #b80000;
+	--cinema-blue: #1a1a2e;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background: radial-gradient(circle at 60% 20%, var(--primary-color) 0%, var(--cinema-blue) 100%);
+	color: var(--accent-color);
+	line-height: 1.6;
+	min-height: 100vh;
+	font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	position: relative;
+}
+body::before {
+	content: '';
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/8/8b/Tobey_Maguire_2014.jpg') no-repeat right 5% top 10%/300px auto;
+	opacity: 0.04;
+	pointer-events: none;
+	z-index: 0;
+}
+
+header {
+	background: linear-gradient(90deg, var(--primary-color) 60%, var(--cinema-red) 100%);
+	color: var(--accent-color);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	box-shadow: var(--shadow);
+	border-bottom: 3px solid var(--gold);
+	backdrop-filter: blur(4px);
+}
+
+.logo {
+	font-size: 2.7rem;
+	font-weight: 900;
+	color: var(--gold);
+	text-shadow: 2px 2px 8px var(--cinema-red);
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-family: 'Bebas Neue', 'Roboto', sans-serif;
+	filter: drop-shadow(0 2px 6px var(--cinema-blue));
+}
+.logo span {
+	color: var(--secondary-color);
+	text-shadow: 1px 1px 6px var(--primary-color);
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+.nav-links li {
+	margin-left: 30px;
+}
+.nav-links a {
+	color: var(--gold);
+	text-decoration: none;
+	font-weight: 700;
+	transition: var(--transition);
+	position: relative;
+	letter-spacing: 1px;
+	font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+.nav-links a:hover {
+	color: var(--secondary-color);
+	text-shadow: 0 2px 8px var(--cinema-red);
+}
+.nav-links a::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: var(--gold);
+	transition: var(--transition);
+}
+.nav-links a:hover::after {
+	width: 100%;
+}
+
+.hero {
+	height: 100vh;
+	background: linear-gradient(rgba(35,41,70,0.85), rgba(187,0,0,0.85)), url('https://wallpapers.com/images/hd/spiderman-tobey-maguire-portrait-6w7w2w2w2w2w2w2w.jpg') no-repeat center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--gold);
+	margin-top: 70px;
+	box-shadow: var(--shadow);
+	border-bottom: 3px solid var(--gold);
+	position: relative;
+}
+.hero::after {
+	content: 'Tobey Maguire';
+	position: absolute;
+	bottom: 20px; right: 40px;
+	font-size: 1.2rem;
+	color: var(--secondary-color);
+	opacity: 0.2;
+	font-family: 'Bebas Neue', 'Roboto', sans-serif;
+	pointer-events: none;
+}
+.hero-content h1 {
+	font-size: 4rem;
+	margin-bottom: 20px;
+	animation: fadeInDown 1s ease;
+	color: var(--gold);
+	text-shadow: 2px 2px 12px var(--cinema-red);
+	font-family: 'Bebas Neue', 'Roboto', sans-serif;
+	letter-spacing: 2px;
+}
+.hero-content p {
+	font-size: 1.7rem;
+	margin-bottom: 30px;
+	animation: fadeInUp 1s ease;
+	color: var(--secondary-color);
+	text-shadow: 1px 1px 8px var(--primary-color);
+	font-style: italic;
+}
+
+.btn {
+	display: inline-block;
+	background-color: var(--cinema-red);
+	color: var(--gold);
+	padding: 12px 30px;
+	border: none;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 700;
+	transition: var(--transition);
+	cursor: pointer;
+	box-shadow: 0 4px 12px rgba(187,0,0,0.15);
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+.btn:hover {
+	background-color: var(--gold);
+	color: var(--cinema-red);
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 10px 20px rgba(35,41,70,0.2);
+}
+
+section {
+	padding: 80px 0;
+}
+.section-title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.section-title h2 {
+	font-size: 2.5rem;
+	color: var(--gold);
+	position: relative;
+	display: inline-block;
+	padding-bottom: 15px;
+	text-shadow: 2px 2px 8px var(--cinema-blue);
+}
+.section-title h2::after {
+	content: '';
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	background-color: var(--secondary-color);
+	bottom: 0;
+	left: 20%;
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 40px;
+	box-shadow: 0 0 32px 0 rgba(35,41,70,0.18), 0 0 12px 2px rgba(255,215,0,0.10);
+	border-radius: 16px;
+	background: rgba(35,41,70,0.04);
+}
+.about-img {
+	flex: 1;
+	min-width: 300px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(192,57,43,0.15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.about-img img {
+		width: 260px;
+		height: auto;
+		border-radius: 10px;
+		transition: var(--transition);
+		box-shadow: 0 0 24px 0 rgba(35,41,70,0.35), 0 0 12px 2px rgba(255,215,0,0.18);
+}
+.about-img:hover img {
+	transform: scale(1.05);
+}
+.about-text {
+	flex: 1;
+	min-width: 300px;
+}
+.about-text h3 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: var(--gold);
+	text-shadow: 1px 1px 6px var(--cinema-blue);
+}
+.about-text p {
+	margin-bottom: 15px;
+	font-size: 1.1rem;
+}
+
+.projects {
+	background: linear-gradient(90deg, var(--primary-color) 60%, var(--cinema-red) 100%);
+	border-top: 3px solid var(--gold);
+	box-shadow: var(--shadow);
+}
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 25px;
+}
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+	box-shadow: 0 5px 15px rgba(35,41,70,0.12);
+	height: 250px;
+	cursor: pointer;
+	border: 2px solid var(--gold);
+	background: var(--dark-color);
+	transition: transform 0.2s;
+}
+.gallery-item:hover {
+	transform: scale(1.03) rotate(-1deg);
+	box-shadow: 0 12px 32px rgba(35,41,70,0.18);
+}
+.gallery-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: var(--transition);
+}
+.gallery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(35,41,70,0.93);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: var(--transition);
+	padding: 20px;
+	text-align: center;
+	color: var(--gold);
+	border-top: 3px solid var(--cinema-red);
+	font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+.gallery-item:hover .gallery-overlay {
+	opacity: 1;
+}
+.gallery-item:hover .gallery-img {
+	transform: scale(1.1);
+}
+.gallery-overlay h3 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	transform: translateY(-20px);
+	transition: var(--transition);
+}
+.gallery-overlay p {
+	transform: translateY(20px);
+	transition: var(--transition);
+}
+.gallery-item:hover .gallery-overlay h3,
+.gallery-item:hover .gallery-overlay p {
+	transform: translateY(0);
+}
+
+.contact-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.contact-info {
+	flex: 1;
+	min-width: 300px;
+}
+.contact-info h3 {
+	font-size: 1.8rem;
+	margin-bottom: 20px;
+	color: var(--gold);
+	text-shadow: 1px 1px 6px var(--cinema-blue);
+}
+.contact-info p {
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+}
+.contact-info i {
+	margin-right: 10px;
+	color: var(--secondary-color);
+	font-size: 1.2rem;
+}
+.social-links {
+	display: flex;
+	gap: 15px;
+	margin-top: 20px;
+}
+.social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background-color: var(--primary-color);
+	color: var(--accent-color);
+	border-radius: 50%;
+	transition: var(--transition);
+}
+.social-links a:hover {
+	background-color: var(--secondary-color);
+	color: var(--light-color);
+	transform: translateY(-5px);
+}
+
+.contact-form {
+	flex: 1;
+	min-width: 300px;
+}
+.form-group {
+	margin-bottom: 20px;
+}
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: var(--transition);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: var(--accent-color);
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(241,196,15,0.2);
+}
+.form-group textarea {
+	min-height: 150px;
+	resize: vertical;
+}
+
+footer {
+	background: linear-gradient(90deg, var(--primary-color) 60%, var(--cinema-red) 100%);
+	color: var(--gold);
+	padding: 40px 0;
+	text-align: center;
+	letter-spacing: 1px;
+	border-top: 3px solid var(--gold);
+	box-shadow: var(--shadow);
+}
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.back-to-top {
+	margin-top: 20px;
+	color: var(--gold);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	transition: var(--transition);
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+.back-to-top:hover {
+	color: var(--cinema-red);
+	text-shadow: 1px 1px 8px var(--gold);
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.nav-links {
+		display: none;
+	}
+	.hero-content h1 {
+		font-size: 2.2rem;
+	}
+	.hero-content p {
+		font-size: 1rem;
+	}
+	.section-title h2 {
+		font-size: 1.5rem;
+	}
+	.logo {
+		font-size: 1.7rem;
+	}
+	.gallery-item {
+		height: 180px;
+	}
+}
